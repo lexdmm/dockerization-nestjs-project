@@ -9,7 +9,6 @@ services:
       - "3000:3000"
     volumes:
       - .:/home/nestjs-project-api # the volume mirrors the sources into the container so it catches development changes
-      - /home/nestjs-project-api/node_modules # maps the node modules from the machine's repository to be able to build in the container
 
   database:
     container_name: postgres-db
@@ -20,4 +19,3 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
       POSTGRES_DB: nestgraphqltest
-
