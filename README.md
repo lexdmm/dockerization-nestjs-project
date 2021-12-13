@@ -7,8 +7,8 @@
 Dockerization of a NestJS typescript project
 
 ## About Docker
-- You don't need to have testing or development facilities right on your PC like
-- Avoid headaches when you want to run a different version
+- You don't need to have testing or development facilities right on your PC
+- Avoid headaches when you want to run a different version, issues compatibilities
 - Testing a new technology without installing it on your machine
 
 ### Dockerfile 
