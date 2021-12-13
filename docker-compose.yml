@@ -6,7 +6,7 @@ services:
     container_name: dockerization-nestjs-projec
     build: . #build Dockerfile
     ports:
-      - "3000:3000"
+      - '3000:3000'
     volumes:
       - .:/home/nestjs-project-api # the volume mirrors the sources into the container so it catches development changes
 
