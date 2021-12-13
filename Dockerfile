@@ -1,10 +1,13 @@
-FROM node:17-alpine3.14
+FROM node:17-alpine
 
 WORKDIR /home/nestjs-project-api
 
-COPY . .
+COPY package.json .
+COPY package-lock.json .
 
 RUN npm install
+
+COPY . .
 
 CMD npm run start:dev
 
