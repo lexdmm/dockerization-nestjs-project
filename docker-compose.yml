@@ -1,10 +1,28 @@
-version: '3'
+version: '3.1'
+
 services:
-  postgres:
-    image: 'postgres:11.5'
+
+  api:
+    container_name: dockerization-nestjs-projec
+    build: . #build Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/nestjs-project-api # the volume mirrors the sources into the container so it catches development changes
+      - /home/nestjs-project-api/node_modules # maps the node modules from the machine's repository to be able to build in the container
+
+  database:
+    container_name: postgres-db
+    image: postgres:11.5
     ports:
       - '5432:5432'
     environment:
-      POSTGRES_USER: 'root'
-      POSTGRES_PASSWORD: 'root'
-      POSTGRES_DB: 'nestgraphqltest'
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: nestgraphqltest
+    
+    adminer:
+      image: adminer
+      restart: always
+      ports:
+        - 8082:8082
