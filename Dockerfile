@@ -1,4 +1,4 @@
-FROM node:17-alpine
+FROM node:17.2.0-alpine
 
 WORKDIR /home/nestjs-project-api
 
