@@ -20,9 +20,4 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
       POSTGRES_DB: nestgraphqltest
-    
-    adminer:
-      image: adminer
-      restart: always
-      ports:
-        - 8082:8082
+
