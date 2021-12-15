@@ -46,3 +46,4 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+Open project on http://localhost:3000/graphql
